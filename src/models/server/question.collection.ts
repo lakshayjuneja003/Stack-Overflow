@@ -26,22 +26,22 @@ export default async function createQuestionCollection() {
         console.log("Question Attributes Are Created");
 
         // creating indexes
-        await Promise.all([
-            databases.createIndex(db ,
-                questionCollection ,
-                "title" , 
-                IndexType.Fulltext,
-                ["title"],
-                ["asc"]
-            ),
-            databases.createIndex(db ,
-                questionCollection ,
-                "title" , 
-                IndexType.Fulltext,
-                ["content"],
-                ["asc"]
-            ),
-        ])
+        // await Promise.all([
+        //     databases.createIndex(db ,
+        //         questionCollection ,
+        //         "title" , 
+        //         IndexType.Fulltext,
+        //         ["title"],
+        //         ["asc"]
+        //     ),
+        //     databases.createIndex(db ,
+        //         questionCollection ,
+        //         "title" , 
+        //         IndexType.Fulltext,
+        //         ["content"],
+        //         ["asc"]
+        //     ),
+        // ])
     } catch (error) {
         console.log(error)
     }
